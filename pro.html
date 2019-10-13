@@ -1,0 +1,157 @@
+<html>
+  <head>
+     <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+  
+  
+       <div class="container well ">
+	<div class="col-sm-3"></div>
+	<div class="col-sm-6 dd">
+     <center><h2>user form one</h2></center>
+	 <form action="sagar.java" method="post">
+     <div class="row">
+	      
+	      
+	     <div class="col-sm-3">
+		   full name
+		 </div>
+		 <div class="col-sm-8">
+		   <input type="text" placeholder="enter name" class="form-control" id="fname" name="full">
+		   <i id="nameerror"></i>
+		 </div>
+	    
+	   
+	   </div>
+	    <br>
+	    <div class="row">
+	      
+	      
+	     <div class="col-sm-3">
+		   email id
+		 </div>
+		 <div class="col-sm-8">
+		   <input type="text" placeholder="enter email-id" class="form-control" id="email" name="email">
+		     <i id="emailerror"></i>
+		 </div>
+	    
+	    
+	   </div>
+	   
+	   <br>
+	   
+	   <div class="row">
+	      
+	      
+	     <div class="col-sm-3">
+		   password
+		 </div>
+		 <div class="col-sm-8">
+		   <input type="text" placeholder="enter password" class="form-control" id="password" name="pass">
+		   <i id="passerror"></i>
+		 </div>
+	    
+	    
+	   </div>
+	   
+	   <br>
+	   
+	   <div class="row">
+	      
+	      
+	     <div class="col-sm-3">
+		   mobile no
+		 </div>
+		 <div class="col-sm-8">
+		   <input type="text" placeholder="enter mobile no" class="form-control" id="mobile" name="mobile">
+		   <i id="mobileerror"></i>
+		 </div>
+	    
+	    
+	   </div>
+	   
+	   <br>
+	   
+	   <div class="row">
+		<div class="col-sm-12 text-center">
+		 <button class="btn btn-success" onclick="test()">register</button>
+		 <button class="btn btn-danger" onclick="test2()">clear form</button>
+		</div>
+     </form>
+      </div>
+	  
+	  </div>
+  </body>
+    <script>
+	
+	 function test()
+   {
+   
+   
+   var name = document.getElementById("fname").value;
+   name = name.trim(); //to avoid spaces
+   if(name=="")
+   {
+   status = false;
+   document.getElementById("fname").style.borderColor="red";
+    document.getElementById("nameerror").innerHTML="enter name";
+   }else{
+     document.getElementById("fname").style.borderColor="blue";
+	   document.getElementById("nameerror").innerHTML="";
+   }
+   
+   
+   //email no validation start here
+   var email = document.getElementById("email").value;
+   email = email.trim(); //to avoid spaces
+   if((email==""))
+   
+   {
+   status = false;
+   document.getElementById("email").style.borderColor="red";
+    document.getElementById("emailerror").innerHTML="enter id";
+   }else{
+     document.getElementById("email").style.borderColor="blue";
+	   document.getElementById("emailerror").innerHTML="";
+   }
+   
+   
+    //password no validation start here
+   var password = document.getElementById("password").value;
+   password = password.trim(); //to avoid spaces
+   if((password=="") || (password.length !=5) )
+   
+   {
+   status = false;
+   document.getElementById("password").style.borderColor="red";
+    document.getElementById("passerror").innerHTML="enter password";
+   }else{
+     document.getElementById("password").style.borderColor="blue";
+	   document.getElementById("passerror").innerHTML="";
+   }
+   
+   
+   //mobile no validation start here
+   var mobile = document.getElementById("mobile").value;
+   mobile = mobile.trim(); //to avoid spaces
+   if((mobile=="") || (mobile.length !=10) || (isNaN(mobile)) )
+   
+   {
+   status = false;
+   document.getElementById("mobile").style.borderColor="red";
+    document.getElementById("mobileerror").innerHTML="enter mobile no";
+   }else{
+     document.getElementById("mobile").style.borderColor="green";
+	   document.getElementById("mobileerror").innerHTML="";
+   }
+   
+   }
+	</script>
+</html>
